@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size: 1.5em;
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+h2, h3{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+body{
+    background-color: #50bbfd81 ;
+    margin:20px 0;
+    font-family: 'Merriweather', serif;
+  
+}
+.wrapper{
+    width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+}
+header{
+        padding: 20px;
+        overflow: hidden;
+        background-color: white;
+        
+    }
+header > #logo{
+        font-size: 2em;
+        float: left;
+        font-family: 'Roboto', sans-serif;
+        margin: 0px;
+        padding: 20px;
+        background-color: darkred;
+    }
+main{
+    padding: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+#guesses {
+    text-align: center;
+    background-color: darkred;
+    padding: 10px;
+    margin-top: 10px;
+}
+#attempts {
+    text-align: center;
+}
+#guessBox {
+    background-color: darkred;
+    margin: 0px;
+    padding: 20px;
+
+}
+
+#feedback {
+    text-align: center;
+}
+#custom {
+    text-align: center;
+}
