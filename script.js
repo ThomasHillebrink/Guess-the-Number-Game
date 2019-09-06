@@ -3,6 +3,10 @@ let feedback = document.getElementById('feedback');
 let attempts = document.getElementById('attempts');
 let guesses = document.getElementById('guesses');
 let totalAttemps = 0
+let pastGuesses = []
+var e=0;
+
+
 
 function generate() {
     randomNumber = Math.floor(Math.random() * 100);
@@ -22,15 +26,17 @@ function checkNumber(e) {
     }
     totalAttemps++
 
-    var para = document.createElement("P"); // Create a <p> node
-    var t = document.createTextNode(e); // Create a text node
-    para.appendChild(t); // Append the text to <p>
-    document.getElementById("guesses").appendChild(para);
+    pastGuesses.push(e)
+    guesses.innerHTML = pastGuesses;
+
 
     attempts.innerHTML = `Number of previous attempts: ${totalAttemps}`
+    
 
 };
 document.customForm.addEventListener('submit', function(e) {
+    
+    console.log(e)
     e.preventDefault();
     checkNumber(e)
   });
