@@ -15,7 +15,7 @@ generate();
 function checkNumber(e) {
     e.preventDefault()
     const number = parseInt((this.querySelector('[name=guess]').value))
-console.log(number);
+    console.log(number);
     if (number === randomNumber) {
         feedback.innerHTML = 'Correct!'
         console.log('Correct!')
@@ -28,7 +28,7 @@ console.log(number);
         feedback.innerHTML = 'Too high!'
         console.log('Too high!')
         guesses.innerHTML += `<p>${number} - Too high!<p>`
-    } else 
+    } else
         alert("please insert a number");
     totalAttemps++
 
@@ -36,7 +36,7 @@ console.log(number);
 
 
     attempts.innerHTML = `Number of previous attempts: ${totalAttemps}`
-    
+
     this.reset();
 };
 searchInput.addEventListener('submit', checkNumber);
