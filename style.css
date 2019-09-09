@@ -5,17 +5,24 @@ html {
     font-family: Futura,"Trebuchet MS",Arial,sans-serif;
 }
 h1{
-    font-size: 1.5em;
+    font-size: 1.9em;
     border-bottom: 1px solid gray;
     padding-bottom: 15px;
     text-align: center;
     
 }
 
-h2, h3{
+h2{
+    font-size: 1.5em; 
     margin: 0;
     text-align: center;
 }
+h3{
+    font-size: 1.2em; 
+    margin: 0;
+    text-align: center;
+}
+
 body{
     background-color: #50bbfd81 ;
     margin:20px 0;
