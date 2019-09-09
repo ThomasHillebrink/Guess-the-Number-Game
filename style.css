@@ -1,22 +1,24 @@
 *{
     box-sizing: border-box;
 }
+html {
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+}
 h1{
     font-size: 1.5em;
     border-bottom: 1px solid gray;
     padding-bottom: 15px;
     text-align: center;
+    
 }
 
 h2, h3{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 body{
     background-color: #50bbfd81 ;
     margin:20px 0;
-    font-family: 'Merriweather', serif;
   
 }
 .wrapper{
@@ -31,31 +33,37 @@ header{
         background-color: white;
         padding-left: 50px;
         padding-right: 50px;
-        border-radius: 25px;
+        border-radius: 10px;
         
     }
 header > #logo{
         font-size: 1em;
-        font-family: 'Roboto', sans-serif;
         margin: 0px;
         padding: 10px;
         background-color: darkred;
-        border-radius: 25px;
+        border-radius: 10px;
     }
 main{
-    margin: 0px;
-    padding: 10px;
+
     overflow: hidden;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
+    padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
+}
+main > input {
+    padding: 10px;
+}
+#inputBox{
+    margin: 10px
 }
 #guessbox {
     text-align: center;
     background-color: darkred;
     padding: 10px;
     margin-top: 10px;
+    border-radius: 10px;
 }
 #attempts {
     text-align: center;
@@ -64,8 +72,7 @@ main{
     background-color: darkred;
     margin: 0px;
     padding: 20px;
-    
-
+    border-radius: 10px;
 }
 
 #feedback {

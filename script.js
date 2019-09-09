@@ -22,16 +22,19 @@ console.log(number);
     if (number === randomNumber) {
         feedback.innerHTML = 'correct!'
         console.log('correct!')
+        guesses.innerHTML += `<p>${number} - correct!<p>`
     } else if (number <= randomNumber) {
         feedback.innerHTML = 'Too low!'
         console.log('Too low!')
+        guesses.innerHTML += `<p>${number} - Too low!<p>`
     } else if (number >= randomNumber) {
         feedback.innerHTML = 'Too high!'
         console.log('Too high!')
+        guesses.innerHTML += `<p>${number} - Too high!<p>`
     }
     totalAttemps++
 
-    guesses.innerHTML += `<p>${number}<p>`
+
 
 
     attempts.innerHTML = `Number of previous attempts: ${totalAttemps}`
