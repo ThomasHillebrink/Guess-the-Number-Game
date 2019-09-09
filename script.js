@@ -4,9 +4,6 @@ const attempts = document.getElementById('attempts');
 let guesses = document.getElementById('guesses');
 const searchInput = document.querySelector('.guessInput');
 let totalAttemps = 0
-let pastGuesses = []
-
-var e=0;
 
 
 
@@ -17,12 +14,12 @@ generate();
 
 function checkNumber(e) {
     e.preventDefault()
-    const number = (this.querySelector('[name=guess]').value)
+    const number = parseInt((this.querySelector('[name=guess]').value))
 console.log(number);
     if (number === randomNumber) {
-        feedback.innerHTML = 'correct!'
-        console.log('correct!')
-        guesses.innerHTML += `<p>${number} - correct!<p>`
+        feedback.innerHTML = 'Correct!'
+        console.log('Correct!')
+        guesses.innerHTML += `<p>${number} - Correct!<p>`
     } else if (number <= randomNumber) {
         feedback.innerHTML = 'Too low!'
         console.log('Too low!')
@@ -31,7 +28,8 @@ console.log(number);
         feedback.innerHTML = 'Too high!'
         console.log('Too high!')
         guesses.innerHTML += `<p>${number} - Too high!<p>`
-    }
+    } else 
+        alert("please insert a number");
     totalAttemps++
 
 
