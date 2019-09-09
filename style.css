@@ -26,23 +26,30 @@ body{
     border-radius: 10px;
 }
 header{
-        padding: 20px;
+        padding: 10px;
         overflow: hidden;
         background-color: white;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 25px;
         
     }
 header > #logo{
-        font-size: 2em;
-        float: left;
+        font-size: 1em;
         font-family: 'Roboto', sans-serif;
         margin: 0px;
-        padding: 20px;
+        padding: 10px;
         background-color: darkred;
+        border-radius: 25px;
     }
 main{
-    padding: 20px;
+    margin: 0px;
+    padding: 10px;
     overflow: hidden;
     background-color: white;
+    border-radius: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 #guessbox {
     text-align: center;
@@ -57,12 +64,13 @@ main{
     background-color: darkred;
     margin: 0px;
     padding: 20px;
+    
 
 }
 
 #feedback {
     text-align: center;
 }
-#custom {
+.guessInput {
     text-align: center;
 }

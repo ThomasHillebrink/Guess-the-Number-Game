@@ -1,9 +1,11 @@
 let randomNumber;
-let feedback = document.getElementById('feedback');
-let attempts = document.getElementById('attempts');
+const feedback = document.getElementById('feedback');
+const attempts = document.getElementById('attempts');
 let guesses = document.getElementById('guesses');
+const searchInput = document.querySelector('.guessInput');
 let totalAttemps = 0
 let pastGuesses = []
+
 var e=0;
 
 
@@ -14,29 +16,26 @@ function generate() {
 generate();
 
 function checkNumber(e) {
-    if (e === randomNumber) {
+    e.preventDefault()
+    const number = (this.querySelector('[name=guess]').value)
+console.log(number);
+    if (number === randomNumber) {
         feedback.innerHTML = 'correct!'
         console.log('correct!')
-    } else if (e <= randomNumber) {
+    } else if (number <= randomNumber) {
         feedback.innerHTML = 'Too low!'
         console.log('Too low!')
-    } else if (e >= randomNumber) {
+    } else if (number >= randomNumber) {
         feedback.innerHTML = 'Too high!'
         console.log('Too high!')
     }
     totalAttemps++
 
-    pastGuesses.push(e)
-    guesses.innerHTML = pastGuesses;
+    guesses.innerHTML += `<p>${number}<p>`
 
 
     attempts.innerHTML = `Number of previous attempts: ${totalAttemps}`
     
-
+    this.reset();
 };
-document.customForm.addEventListener('submit', function(e) {
-    
-    console.log(e)
-    e.preventDefault();
-    checkNumber(e)
-  });
+searchInput.addEventListener('submit', checkNumber);
