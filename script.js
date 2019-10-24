@@ -1,21 +1,22 @@
-let randomNumber;
 const feedback = document.getElementById('feedback');
 const attempts = document.getElementById('attempts');
-let guesses = document.getElementById('guesses');
-const searchInput = document.querySelector('.guessInput');
+const guessInput = document.querySelector('.guessInput');
+const inputBox = document.getElementById('inputBox');
 let totalAttemps = 0
+let guesses = document.getElementById('guesses');
+let randomNumber = generate();
 
 
 
 function generate() {
-    randomNumber = Math.floor(Math.random() * 100);
+    return Math.floor(Math.random() * 100);
 }
-generate();
+
 
 function checkNumber(e) {
     e.preventDefault()
-    const number = parseInt((this.querySelector('[name=guess]').value))
-    console.log(number);
+    const number = Number(inputBox.value)
+    console.log(typeof number);
     if (number === randomNumber) {
         feedback.innerHTML = 'Correct!'
         console.log('Correct!')
@@ -39,4 +40,4 @@ function checkNumber(e) {
 
     this.reset();
 };
-searchInput.addEventListener('submit', checkNumber);
+guessInput.addEventListener('submit', checkNumber);
