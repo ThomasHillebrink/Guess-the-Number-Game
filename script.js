@@ -2,8 +2,9 @@ const feedback = document.getElementById('feedback');
 const attempts = document.getElementById('attempts');
 const guessInput = document.querySelector('.guessInput');
 const inputBox = document.getElementById('inputBox');
+const guesses = document.getElementById('guesses');
 let totalAttemps = 0
-let guesses = document.getElementById('guesses');
+
 let randomNumber = generate();
 
 
@@ -20,15 +21,15 @@ function checkNumber(e) {
     if (number === randomNumber) {
         feedback.innerHTML = 'Correct!'
         console.log('Correct!')
-        guesses.innerHTML += `<p>${number} - Correct!<p>`
+        guesses.innerHTML += ` ${number} `
     } else if (number <= randomNumber) {
         feedback.innerHTML = 'Too low!'
         console.log('Too low!')
-        guesses.innerHTML += `<p>${number} - Too low!<p>`
+        guesses.innerHTML += ` ${number} `
     } else if (number >= randomNumber) {
         feedback.innerHTML = 'Too high!'
         console.log('Too high!')
-        guesses.innerHTML += `<p>${number} - Too high!<p>`
+        guesses.innerHTML += ` ${number} `
     } else
         alert("please insert a number");
     totalAttemps++
